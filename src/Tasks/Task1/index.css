@@ -1,0 +1,97 @@
+:root {
+  --main-bg-color: grey;
+  --head-bg-color: peru;
+  --content-height: 440px;
+  --content-padding: 70px;
+  --content-border-radius: 20px;
+  --head-height: 150px;
+  --head-border-radius: 15px;
+  --btn-width: 300px;
+  --btn-height: 39px;
+  --btn-border-radius: 14px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: space-between;
+}
+
+.content {
+  background-color: var(--main-bg-color);
+  height: var(--content-height);
+  position: relative;
+  top: -19px;
+  display: flex;
+  align-items: center;
+  padding: var(--content-padding);
+  border-radius: var(--content-border-radius);
+  width: 98%;
+}
+
+.head {
+  margin-top: 4px;
+  background-color: var(--head-bg-color);
+  height: var(--head-height);
+  width: 98%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--head-border-radius);
+}
+
+.btn {
+  position: relative;
+  top: -33px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#btns {
+  width: var(--btn-width);
+  height: var(--btn-height);
+  border-radius: var(--btn-border-radius);
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .content {
+    height: auto;
+    padding: 50px;
+  }
+
+  .head {
+    height: 120px;
+  }
+
+  #btns {
+    width: 250px;
+    height: 35px;
+  }
+}
+
+@media (max-width: 480px) {
+  .content {
+    padding: 30px;
+  }
+
+  .head {
+    height: 100px;
+  }
+
+  #btns {
+    width: 200px;
+    height: 30px;
+  }
+}

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Person Description</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        form {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-bottom: 5px;
+        }
+
+        input {
+            margin-bottom: 15px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+
+        #addPersonButton {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        #showDescriptionButton {
+            background-color: #2196F3;
+            color: white;
+        }
+
+        #resetButton {
+            background-color: #f44336;
+            color: white;
+        }
+
+        #searchButton {
+            background-color: #FF9800;
+            color: white;
+        }
+
+        #descriptionContainer {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+
+        .dis {
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+
+<body>
+    <form id="personForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <label for="city">City:</label>
+        <input type="text" id="city" name="city" required>
+        <label for="mobile">Mobile:</label>
+        <input type="text" id="mobile" name="mobile" required>
+        <button type="button" id="addPersonButton">Add Person</button>
+        <button type="button" id="showDescriptionButton">Show Description</button>
+        <button type="button" id="resetButton">Reset</button>
+        <label for="search">Search by Name:</label>
+        <input type="text" id="search" name="search">
+        <button type="button" id="searchButton">Search</button>
+    </form>
+    <div id="descriptionContainer"></div>
+    <script src="script.js"></script>
+</body>
+
+</html>

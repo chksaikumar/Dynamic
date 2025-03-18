@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Input Alert</title>
+</head>
+
+<body>
+    <h1>Enter your name:</h1>
+    <form id="userForm">
+        <input type="text" id="userInput" placeholder="Enter your name">
+        <button type="button" onclick="showAlert()">Enter</button>
+    </form>
+
+    <script>
+        function showAlert() {
+            const userInput = document.getElementById('userInput').value;
+            alert("Welcome to JS " + userInput);
+        }
+    </script>
+</body>
+
+</html>

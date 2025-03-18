@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Uppercase Converter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        input {
+            padding: 10px;
+            font-size: 16px;
+            margin: 10px;
+            width: 300px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Enter text below:</h2>
+    <input type="text" id="textInput" placeholder="Enter text here">
+    <input type="text" id="textOutput" placeholder="Output will be generated here" readonly disabled>
+
+    <script>
+        document.getElementById("textInput").addEventListener("input", function () {
+            let inputText = this.value;
+            document.getElementById("textOutput").value = inputText.toUpperCase();
+        });
+    </script>
+
+</body>
+
+</html>
