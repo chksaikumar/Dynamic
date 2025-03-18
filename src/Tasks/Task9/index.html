@@ -4,37 +4,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Star Generator</title>
+    <title>Document</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        .st {
+            /* color: green; */
+            height: 100vh;
             display: flex;
-            flex-direction: column;
             align-items: center;
             justify-content: center;
-            height: 100vh;
-            background-color: #f0f2f5;
-            margin: 0;
-        }
-
-        #star-container {
-            margin-top: 20px;
-        }
-
-        .stc {
-            font-size: 1.5rem;
-            margin: 5px 0;
         }
     </style>
 </head>
 
 <body>
-    <h1>Star Generator</h1>
-    <label for="sizeInput">Enter the number of rows:</label>
-    <input type="number" id="sizeInput" min="1" max="20">
-    <button id="generateButton">Generate Stars</button>
-    <div id="star-container"></div>
-    <script src="script.js"></script>
+    <div class="st">
+        <input type="number" id="sizeInput" placeholder="Enter size">
+        <button id="generateButton">Generate</button>
+        <div id="star-container"></div>
+
+        <!-- <script src="array.js"> -->
+
+        <script src='./script.js'>
+
+        </script>
+    </div>
 </body>
 
 </html>

@@ -29,7 +29,7 @@
 .content {
   background-color: var(--main-bg-color);
   height: var(--content-height);
-  position: relative;
+  position: static;
   top: -19px;
   display: flex;
   align-items: center;

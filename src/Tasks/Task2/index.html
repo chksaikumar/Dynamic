@@ -18,7 +18,7 @@
 
         .google-logo {
             display: flex;
-            gap: 60px;
+            gap: 20px;
         }
 
         .google-logo span {
@@ -70,6 +70,26 @@
 
         .e {
             color: #EA4335;
+        }
+
+        @media (max-width: 768px) {
+            .google-logo {
+                gap: 10px;
+            }
+
+            .google-logo span {
+                font-size: 80px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .google-logo {
+                gap: 5px;
+            }
+
+            .google-logo span {
+                font-size: 60px;
+            }
         }
     </style>
 </head>
