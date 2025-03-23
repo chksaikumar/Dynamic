@@ -71,7 +71,7 @@ function displayTasks(tasks) {
   });
 }
 
-function showPopup(taskTitle) {
+function showPopup1(taskTitle) {
   const popup = document.createElement("div");
   popup.className = "popup";
   popup.textContent = taskTitle;
@@ -168,3 +168,48 @@ function showPopupBubble(taskTitle) {
 window.onload = () => {
   homeButton.onclick();
 };
+function showPopup(taskTitle) {
+  const popup = document.createElement("div");
+  popup.className = "popup";
+  popup.textContent = taskTitle;
+  document.body.appendChild(popup);
+
+  // Apply initial styles
+  popup.style.position = "fixed";
+  popup.style.left = "-200px"; // Start from outside the screen
+  popup.style.top = "50%";
+  popup.style.transform = "translateY(-50%) rotateY(30deg)"; // 3D effect
+  popup.style.background = "rgba(0, 0, 0, 0.9)";
+  popup.style.color = "#fff";
+  popup.style.padding = "5px"; // Reduced padding for smaller height
+  popup.style.borderRadius = "8px";
+  popup.style.height = "21px";
+  popup.style.fontSize = "14px";
+  popup.style.fontWeight = "bold";
+  popup.style.whiteSpace = "nowrap"; // Prevents multi-line wrapping
+  popup.style.boxShadow = "3px 3px 10px rgba(0, 0, 0, 0.3)";
+  popup.style.transition = "left 0.5s ease-out, transform 0.5s ease-out";
+
+  // Append to DOM first to calculate size dynamically
+  document.body.appendChild(popup);
+
+  // Dynamically adjust width based on text size
+  popup.style.width = `${popup.scrollWidth + 10}px`; // Fit the text snugly
+
+  // Animate to move in
+  setTimeout(() => {
+    popup.style.left = "20px"; // Slide into view
+    popup.style.transform = "translateY(-50%) rotateY(0deg)"; // Remove 3D rotation
+  }, 10);
+
+  // Remove the popup after some time
+  // setTimeout(() => {
+  //   popup.style.left = "-200px"; // Move back to the left
+  //   popup.style.transform = "translateY(-50%) rotateY(30deg)";
+  // }, 1000);
+
+  // Remove from DOM after animation
+  setTimeout(() => {
+    popup.remove();
+  }, 1500);
+}
