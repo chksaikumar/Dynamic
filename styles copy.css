@@ -9,6 +9,51 @@ body {
   padding-top: 100px; /* Add padding to account for the fixed header height */
 }
 
+header {
+  background: linear-gradient(90deg, #4caf50, #2e7d32);
+  color: white;
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  overflow-x: auto;
+  white-space: nowrap;
+  padding-left: 15px;
+  flex-wrap: wrap;
+  height: 78px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  transition: background 0.5s ease-in-out; /* Smooth transition effect */
+}
+
+header:hover {
+  background: linear-gradient(
+    90deg,
+    #2e7d32,
+    #4caf50
+  ); /* Reverse gradient on hover */
+}
+
+header button {
+  background-color: #ffffff;
+  border: 2px solid #4caf50;
+  color: #4caf50;
+  border-radius: 5px;
+  padding: 8px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  flex-shrink: 0;
+}
+
+header button:hover {
+  background-color: #4caf50;
+  color: #ffffff;
+}
+
 iframe {
   width: 100%;
   height: 100%;
@@ -135,6 +180,26 @@ header {
   transition: background 0.5s ease-in-out; /* Smooth transition effect */
 }
 
+header:hover {
+  background: linear-gradient(to right, #ffb6c1 50%, #87ceeb 50%);
+}
+
+header button {
+  background-color: #ffffff;
+  border: 2px solid #87ceeb;
+  color: #87ceeb;
+  border-radius: 5px;
+  padding: 8px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  flex-shrink: 0;
+}
+
+header button:hover {
+  background-color: #87ceeb;
+  color: #ffffff;
+}
+
 /* Bubble Styling */
 .bubble {
   position: absolute;
@@ -179,52 +244,4 @@ header {
     opacity: 0;
     transform: translateY(-50px) scale(1.5);
   }
-}
-
-/* heade re make  */
-
-header {
-  background: linear-gradient(
-    to right,
-    #89cdea,
-    #032935
-  ); /* Bright gradient colors */
-  color: white;
-  width: 100%;
-  text-align: center;
-  padding: 10px 0;
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  overflow-x: auto;
-  white-space: nowrap;
-  padding-left: 15px;
-  flex-wrap: wrap;
-  height: 78px;
-}
-
-header:hover {
-  background: linear-gradient(
-    to right,
-    #032935,
-    #89cdea
-  ); /* Reverse gradient on hover */
-  transform: perspective(1000px) rotateX(0deg);
-}
-header button {
-  background-color: #ffffff;
-  border: 2px solid #89cdea;
-  color: #89cdea;
-  border-radius: 5px;
-  padding: 8px 20px;
-  cursor: pointer;
-  transition: background-color 0.3s, color 0.3s, transform 0.3s;
-  flex-shrink: 0;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-header button:hover {
-  background-color: #89cdea;
-  color: #ffffff;
-  transform: translateY(-3px);
-  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
 }

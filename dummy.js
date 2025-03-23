@@ -23,8 +23,6 @@
 //   header.appendChild(button);
 // });
 
-/*
-
 const tasks = [
   { id: 1, title: "Basic HTML Styling", url: "./src/Tasks/Task1/index.html" },
   { id: 2, title: "CSS Hover", url: "./src/Tasks/Task2/index.html" },
@@ -76,4 +74,3 @@ tasks.forEach((task) => {
   };
   header.appendChild(button);
 });
-*/
